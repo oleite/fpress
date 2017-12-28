@@ -1,0 +1,27 @@
+//Colors
+$primary-color: #7F1B22; //cor primária
+$semi-black: #111111; //main font color
+$semi-white1: #F1F1F1; //section A bg
+$semi-white2: #d8d8d8; //ft categorias / hr
+$semi-white3: #808080; //post categorias
+
+
+//Breakpoints
+$break-max-xs: 480px; /* Telefones em landscape e abaixo */
+$break-max-sm: 767px; /* Telefone em landscape a tablet em portrait */
+$break-min-md: 768px; /* tablet em portrait a landscape e desktop */
+$break-max-md: 979px; /* // */
+$break-min-lg: 1200px;
+
+
+//
+$max-width: 1200px;
+@mixin side-padding($padding: 15px, $padding-mobile: 3px) {
+  padding-right: $padding;
+  padding-left: $padding;
+  @media (max-width: 767px) {
+	  padding-right: $padding-mobile;
+	  padding-left: $padding-mobile;
+  }
+}
+$min-height: 10px; //Featured posts

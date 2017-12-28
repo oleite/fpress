@@ -1,0 +1,15 @@
+@import 'variables'; //Variáveis gerais
+
+.sidebar {
+  background-color: $semi-white1;
+
+  width: 270px;
+  margin-left: 30px;
+
+  @media (max-width: $break-max-md){
+      margin-left: 15px;
+   }
+ @media (min-width: $break-min-lg){
+      margin-left: 50px;
+   }
+}

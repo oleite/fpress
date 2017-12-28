@@ -1,0 +1,128 @@
+@import 'variables'; //Variáveis gerais
+
+
+
+.feat-container {
+	display: flex;
+	max-width: $max-width;
+	margin: 0 auto 0 auto;
+
+	font-family: 'Source Sans Pro', sans-serif;
+
+	color: #FFF;
+
+	line-height: 1.34;
+
+	padding-top: 15px;
+	padding-bottom: 15px;
+	@include side-padding;
+}
+.feat-container h1, .feat-container h2 {
+	text-shadow: 1px 1px 7px rgba(0, 0, 0, 0.75);
+	font-weight: 600;
+	margin: 0;
+}
+.feat-container p {
+	text-shadow: 0.5px 0.5px 11px rgba(0, 0, 0, 0.75);
+	margin-top: 0;
+}
+
+.feat-second-container {
+	display: flex;
+  flex-direction: column;
+  flex: 10;
+}
+.feat-container,
+.feat-second-container {
+	@media (max-width: $break-max-sm) {
+		display: inherit;
+	}
+}
+
+.feat-first {
+	min-height: $min-height;
+  	flex: 13;
+	@media (min-width: $break-max-sm) {
+		margin-right: 10px;
+	}
+}
+
+.feat-second {
+	min-height: ($min-height - 10)/2;
+	margin-bottom: 10px;
+	flex: 1;
+
+	&:nth-child(1) {
+		background-image: url('../img/gincana-min.jpg');
+	}
+	&:nth-child(2) {
+		background-image: url('../img/zoologico2-min.jpg');
+		margin-bottom: 0;
+	}
+}
+
+.feat-first,
+.feat-second {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	background-color: $primary-color;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+
+	transition: box-shadow 0.2s, transform 0.1s;
+
+	&:hover,
+	&:active {
+	  box-shadow: 0px 0px 40px -6px rgba(0,0,0,0.35);
+	  transform: scale(1.01)
+	}
+	@media (max-width: $break-max-sm) {
+		margin-bottom: 3px;
+	}
+}
+
+
+.feat-content {
+	margin: auto 10px 10px 30px;
+	font-size: 15px;
+
+	.data {
+		color: $semi-white2;
+	}
+}
+.feat-category {
+	margin: 20px 10px 0 30px;
+
+	.categorias {
+		margin-bottom: 50px;
+	}
+}
+
+
+/* Telefones em landscape e abaixo */
+@media (max-width: 480px) {
+	.feat-first {
+		min-height: 300px;
+	}
+
+	.feat-content, .feat-category { margin-left: 10px }
+
+	h1 {
+		font-size: 24pt;
+	}
+	h2 {
+		font-size: 18pt;
+	}
+}
+
+@media (min-width: $break-min-md) and (max-width: $break-max-md) {
+	.feat-first {
+		margin-right: 5px;
+	}
+	.feat-second {
+		margin-bottom: 5px;
+	}
+}

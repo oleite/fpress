@@ -16,10 +16,11 @@
 .feat-first { min-height: 10px; -webkit-box-flex: 13; -ms-flex: 13; flex: 13; }
 @media (min-width: 767px) { .feat-first { margin-right: 10px; } }
 
-.feat-second { min-height: 0px; margin-bottom: 10px; }
-.feat-second:last-child { margin-bottom: 0; }
+.feat-second { min-height: 0px; margin-bottom: 10px; -webkit-box-flex: 1; -ms-flex: 1; flex: 1; }
+.feat-second:nth-child(1) { background-image: url("../img/gincana-min.jpg"); }
+.feat-second:nth-child(2) { background-image: url("../img/zoologico2-min.jpg"); margin-bottom: 0; }
 
-.feat-first, .feat-second { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; background-color: #111111; background-repeat: no-repeat; background-size: cover; background-position: center; -webkit-transition: -webkit-box-shadow 0.2s, -webkit-transform 0.1s; transition: -webkit-box-shadow 0.2s, -webkit-transform 0.1s; transition: box-shadow 0.2s, transform 0.1s; transition: box-shadow 0.2s, transform 0.1s, -webkit-box-shadow 0.2s, -webkit-transform 0.1s; }
+.feat-first, .feat-second { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; background-color: #7F1B22; background-repeat: no-repeat; background-size: cover; background-position: center; -webkit-transition: -webkit-box-shadow 0.2s, -webkit-transform 0.1s; transition: -webkit-box-shadow 0.2s, -webkit-transform 0.1s; transition: box-shadow 0.2s, transform 0.1s; transition: box-shadow 0.2s, transform 0.1s, -webkit-box-shadow 0.2s, -webkit-transform 0.1s; }
 .feat-first:hover, .feat-first:active, .feat-second:hover, .feat-second:active { -webkit-box-shadow: 0px 0px 40px -6px rgba(0, 0, 0, 0.35); box-shadow: 0px 0px 40px -6px rgba(0, 0, 0, 0.35); -webkit-transform: scale(1.01); transform: scale(1.01); }
 @media (max-width: 767px) { .feat-first, .feat-second { margin-bottom: 3px; } }
 

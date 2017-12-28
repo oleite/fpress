@@ -1,0 +1,135 @@
+@import 'variables'; //Variáveis gerais
+
+@import 'home-featured';
+@import 'home-posts';
+@import 'sidebar';
+
+
+body,
+html {
+	margin: 0;
+	padding: 0;
+	color: $semi-black;
+}
+
+h1 {
+	font-size: 36pt;
+}
+h2 {
+	font-size: 24pt;
+}
+h3 {
+	font-size: 18pt;
+	color: $primary-color;
+	margin: 0;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+	&:hover {
+		@extend a;
+	}
+}
+
+.section-a {
+	background-color: $semi-white1;
+	margin-bottom: 30px;
+}
+.section-b {
+	display: flex;
+	max-width: $max-width;
+	margin: 0 auto 0 auto;
+	@include side-padding;
+
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+.large-shadow {
+	box-shadow: 0px 0px 40px -6px rgba(0,0,0,0.26);
+}
+
+hr {
+	background-color: $semi-white2;
+	height: 1px;
+	border: 0;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.data {
+	font-weight: 300;
+	font-size: 10pt;
+	text-transform: uppercase;
+}
+.categorias {
+	font-family: 'Calibri', sans-serif;
+	font-weight: bold;
+	font-size: 13px;
+	text-transform: uppercase;
+}
+
+.desktop-only {
+	@media (max-width: $break-max-sm) {
+		display: none;
+	}
+}
+.mobile-only {
+	@media (min-width: $break-min-md) {
+		display: none;
+	}
+}
+
+//----HEADER----//
+.header-container {
+	width: 100%;
+	height: 100px;
+	@include side-padding(20px,10px);
+
+	background-color: white;
+
+	position:relative;
+	box-sizing: border-box;
+}
+.header {
+	height: 100%;
+	display: flex;
+	max-width: $max-width;
+	margin: 0 auto 0 auto;
+
+	padding-top: 15px;
+	padding-bottom: 15px;
+	box-sizing: border-box;
+}
+.header-logo {
+	height: 100%;
+}
+.header-description {
+	position: relative;
+	margin: 0;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+//--------//
+
+footer {
+	box-sizing: border-box;
+	margin-top: 200px;
+	width: 100%;
+	padding: 15px;
+	font-family: 'Source Sans Pro', sans-serif;
+	background-color: $primary-color;
+	color: $semi-white2;
+	box-shadow: inset 0px 6px 20px 0px rgba(0,0,0,0.26), inset 0 0 0px 0px;
+	a {
+		color: inherit;
+	}
+}
+
+
+/* Telefones em landscape e abaixo */
+@media (max-width: $break-max-sm) {}
+/* Telefone em landscape a tablet em portrait */
+@media (max-width: $break-max-sm) {}
+/* tablet em portrait a landscape e desktop */
+@media (min-width: $break-min-md) and (max-width: $break-max-md) {}
+/* Desktop grande */
+@media (min-width: $break-min-lg) {}

@@ -5,11 +5,7 @@
    if (in_array($post->ID,$do_not_duplicate) ) continue; ?>
 
       <div class="post">
-
-         <?php if (has_post_thumbnail()): ?>
-            <div class="post-featured-image" style="background-image: url('<?php the_post_thumbnail_url(); ?>');"></div>
-         <?php endif; ?>
-
+         <div class="post-featured-image" style="background-image: url('<?php the_post_thumbnail_url(); ?>');"></div>
          <div class="post-content">
             <p class="categorias">
                <?php if ( is_sticky() ): ?>
@@ -22,7 +18,6 @@
             <p class="data desktop-only"><?php the_time( get_option( 'date_format' )); ?></p>
          </div>
          <p class="data mobile-only" style="order: 3"><?php the_time( get_option( 'date_format' )); ?></p>
-         
       </div>
 
       <hr />

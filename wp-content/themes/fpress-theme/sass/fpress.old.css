@@ -1,0 +1,42 @@
+html,
+body {
+	margin: 0;
+	color: #333;
+	font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+a:hover {
+	color: #931B22;
+	text-decoration: none;
+}
+
+h1,h2 {
+	color: white;
+	font-weight: 600;
+}
+h1 {
+	font-size: 36pt;
+}
+h2 {
+	font-size: 24pt;
+}
+h3 {
+	font-size: 18pt;
+	color: #931B22
+}
+
+.date, .category a {
+	color: #808080;
+	font-size: 10pt;
+	text-transform: uppercase;
+}
+.date {
+	font-weight: 300;
+}
+.category a {
+	font-weight: bold;
+}
